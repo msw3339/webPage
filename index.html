@@ -3,13 +3,22 @@
 <head>
 	<meta charset="utf-8">
 	<title>Music player</title>
-<head>
+	<script>
+		function copyLink() {
+			var audioSrc = document.getElementById('audioPlayer').getAttribute('src');
+			var tempInput = document.createElement('input');
+			tempInput.value = audioSrc;
+			document.body.appendChild(tempInput);
+			tempInput.select();
+			document.execCommand('copy');
+			document.body.removeChild(tempInput);
+			alert('Посилання скопійовано: ' + audioSrc);
+		}
+	</script>
+</head>
 <body>
 	<h1> Hello Quant RP </h1>
-	<audio src="music/jsAdmin/maneraStih.mp3" controls></audio>
-
+	<audio id="audioPlayer" src="maneraStih.mp3" controls></audio>
+	<button onclick="copyLink()">Скопіювати посилання на mp3 файл</button>
 </body>
-
-
-</head>
 </html>
