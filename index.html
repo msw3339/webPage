@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    <meta charset="utf-8">
-    <title>Music player</title>
-</head>
+	<meta charset="utf-8">
+	<title>Music player</title>
+<head>
 <body>
-    <h1> Hello Quant RP </h1>
-    <audio id="audioPlayer" src="maneraStih.mp3" controls></audio>
-    <button id="copyButton">Скопіювати посилання на mp3 файл</button>
+	<h1> Hello Quant RP </h1>
+	<audio src="maneraStih.mp3" controls></audio>
 
-    <script>
-        document.getElementById('copyButton').addEventListener('click', function() {
-            var audioSrc = document.getElementById('audioPlayer').src;
-            var tempInput = document.createElement('input');
-            tempInput.value = audioSrc;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            alert('Посилання на mp3 файл скопійовано: ' + audioSrc);
-        });
-    </script>
 </body>
+
+
+</head>
 </html>
